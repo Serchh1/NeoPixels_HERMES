@@ -1,9 +1,9 @@
 #include <Arduino.h>
 #include <neopixel.h>
-#define pin 7
-#define num 8
+#define PINLED 7
+#define NUMPIXELS 8
 
-NeoPixelController strip(pin, num);
+NeoPixelController strip(PINLED, NUMPIXELS);
 
 void setup() 
 {
@@ -27,7 +27,7 @@ void loop()
     delay(500);
 
     // Turn Purple all NeoPixels
-    for (int i = 0; i < num; i++) 
+    for (int i = 0; i < NUMPIXELS; i++) 
     {
         strip.writeEasyNeoPixel(i, 255, 0, 255);
     }

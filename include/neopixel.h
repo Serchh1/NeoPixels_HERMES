@@ -4,7 +4,7 @@
 class NeoPixelController
 {
 public:
-    NeoPixelController (int pin, int num);
+    NeoPixelController (int PINLED, int NUMPIXELS);
     void setupEasyNeoPixels();
     void writeEasyNeoPixel(int num, int val);
     void writeEasyNeoPixel(int num, int r, int g, int b);

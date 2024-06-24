@@ -1,9 +1,9 @@
 #include <Arduino.h>
 #include <neopixel.h>
 
-NeoPixelController::NeoPixelController(int pin, int num) 
+NeoPixelController::NeoPixelController(int pin, int NUMPIXELS) 
 {
-  m_easyNeoPixels = Adafruit_NeoPixel(num, pin, NEO_GRB + NEO_KHZ800);
+  m_easyNeoPixels = Adafruit_NeoPixel(NUMPIXELS, pin, NEO_GRB + NEO_KHZ800);
 }
 
 void NeoPixelController::setupEasyNeoPixels()
