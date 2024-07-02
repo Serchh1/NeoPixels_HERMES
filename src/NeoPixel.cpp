@@ -59,3 +59,14 @@ void NeoPixelController::onEasyNeoPixel()
     m_easyNeoPixels.show();
   }
 }
+void NeoPixelController::writeStripRBGEasyNeoPixel(int r, int g, int b) 
+{
+  if(m_easyNeoPixels.canShow())
+  {
+    for (int i = 0; i < m_easyNeoPixels.numPixels(); i++) 
+    {
+      m_easyNeoPixels.setPixelColor(i, m_easyNeoPixels.Color(r, g, b));
+    }
+    m_easyNeoPixels.show();
+  }
+}

@@ -11,6 +11,7 @@ public:
     void offEasyNeoPixel();
     void onEasyNeoPixel();
     void setBrightnessEasyNeoPixel(int brightness);
+    void writeStripRBGEasyNeoPixel(int r, int g, int b);
 private:
     Adafruit_NeoPixel m_easyNeoPixels;
 };

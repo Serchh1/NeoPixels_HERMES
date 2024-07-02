@@ -1,6 +1,6 @@
 #include <Arduino.h>
 #include <neopixel.h>
-#define PINLED 7
+#define PINLED 6
 #define NUMPIXELS 8
 
 NeoPixelController strip(PINLED, NUMPIXELS);
@@ -27,10 +27,7 @@ void loop()
     delay(500);
 
     // Turn Purple all NeoPixels
-    for (int i = 0; i < NUMPIXELS; i++) 
-    {
-        strip.writeEasyNeoPixel(i, 255, 0, 255);
-    }
+    strip.writeStripRBGEasyNeoPixel(255,0,255);
     delay(1000);
 
     // Turn off all NeoPixels
